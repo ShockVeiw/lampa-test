@@ -1,6 +1,6 @@
 const app = require('./app');
 const mongoose = require('mongoose');
-const { PORT, MONGO_CONNECTION_STRING } = require('./common/config');
+const { APP_PORT, MONGO_CONNECTION_STRING } = require('./common/config');
 
 mongoose.connect(
   MONGO_CONNECTION_STRING, 
@@ -13,11 +13,9 @@ mongoose.connect(
 
     console.log('Connected MongoDB');
 
-    app.listen(PORT, () =>
-      console.log(`App is running on http://localhost:${PORT}`)
+    app.listen(APP_PORT, () =>
+      console.log(`App is running on http://localhost:${APP_PORT}`)
     );
   }
 );
-
-//mongoose.connection.dropDatabase()
 

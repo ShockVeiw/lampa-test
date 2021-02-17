@@ -33,12 +33,14 @@ adSchema.statics.isValidObjectId = id => mongoose.isValidObjectId(id);
 
 adSchema.methods.toClient = function() {
 
-  const obj = this.toObject();
+  const ad = this.toObject();
+  ad.id = ad._id;
 
-  obj.id = obj._id;
-  delete obj._id;
+  delete ad._id;
+  delete ad.createdAt;
+  delete ad.updatedAt;
 
-  return obj;
+  return ad;
 };
 
 module.exports = mongoose.model('Ad', adSchema);

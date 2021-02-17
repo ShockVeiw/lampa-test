@@ -6,6 +6,8 @@ dotenv.config({
 });
 
 module.exports = {
-  PORT: process.env.PORT || 3000,
+  APP_PORT: process.env.APP_PORT || 3000,
+  REDIS_PORT: process.env.REDIS_PORT || 6379,
+  REDIS_HOST: process.env.REDIS_HOST ||  'redis',
   MONGO_CONNECTION_STRING: process.env.MONGO_CONNECTION_STRING
 };
