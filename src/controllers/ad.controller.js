@@ -8,7 +8,7 @@ const getAll = asyncWrapper(async (req, res) => {
   const sortString = Array.isArray(sort) ? sort.join(' ') : sort;
 
   if (page < 0 || limit < 0) 
-    throw new ResponseError(400, 'Parameters "page" and "limit" must be non-negative');
+    throw new ResponseError(400, 'Parameters "page" and "limit" must be non-negative'); 
 
   const ads = await Ad
     .find()

@@ -6,6 +6,7 @@ dotenv.config({
 });
 
 module.exports = {
+  NODE_ENV: process.env.NODE_ENV,
   APP_PORT: process.env.APP_PORT || 3000,
   REDIS_PORT: process.env.REDIS_PORT || 6379,
   REDIS_HOST: process.env.REDIS_HOST ||  'redis',
