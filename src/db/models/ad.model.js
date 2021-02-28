@@ -21,7 +21,8 @@ adSchema.statics.joiValidate = obj => {
       .required(),
     photos: Joi.array()
       .items(Joi.string())
-      .max(3),
+      .max(3)
+      .required(),
     price: Joi.number()
       .required()
   });

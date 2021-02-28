@@ -1,4 +1,4 @@
-const Ad = require('../models/ad.model');
+const Ad = require('../db/models/ad.model');
 const redis = require('../redis');
 const asyncWrapper = require('../helpers/asyncWrapper');
 const ResponseError = require('../helpers/ResponseError');
